@@ -65,7 +65,7 @@ next:
    az group delete --name rg-tailspin-toys --yes --no-wait
    ```
 
-5. `--no-wait` 명령은 삭제가 완료되기 전에 반환되므로 다음 명령이 `false`를 반환할 때까지 다시 실행합니다.
+5. `--no-wait`는 삭제가 완료되기 전에 반환하므로 다음 명령이 `false`를 반환할 때까지 반복해서 실행합니다.
 
    ```bash
    az group exists --name rg-tailspin-toys

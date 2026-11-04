@@ -52,9 +52,9 @@ lastUpdated: 2026-07-09
 6. `.github/copilot-instructions.md`로 이동합니다.
 7. 파일을 살펴봅니다. 프로젝트에 관한 간단한 설명과 **Agent notes**, **Code standards**, **Scripts**, **Repository Structure** 같은 섹션을 확인합니다. **Code standards** 아래에서 중첩된 **GitHub Actions Workflows** 지침을 확인합니다. 이 내용은 Copilot과의 모든 상호 작용에 적용됩니다.
 8. `.github/instructions` 폴더로 이동하여 파일을 살펴봅니다. Astro 파일, Drizzle 데이터 계층, 테스트 등에 관한 지침이 있습니다.
-9. `.github/instructions/unit-tests.instructions.md`를 엽니다. 위쪽의 `applyTo` 필드는 지침이 적용되는 파일을 결정하는 glob을 리포지토리 루트 기준으로 설정합니다. 여기서는 TypeScript 테스트 파일(예: `**/*.test.ts`와 일치하는 파일)이 모두 일치합니다.
+9. `.github/instructions/unit-tests.instructions.md`를 엽니다. 위쪽의 `applyTo` 필드는 지침이 적용되는 파일을 리포지토리 루트 기준 glob으로 지정합니다. 예를 들어 `**/*.test.ts`와 일치하는 TypeScript 테스트 파일이 대상입니다.
 10. 이 프로젝트의 단위 테스트 작성에 관한 구체적인 지침을 확인합니다.
-11. 마지막으로 `.github/instructions/drizzle.instructions.md`를 열고 아래쪽으로 스크롤합니다. 다른 지침 파일(예: `unit-tests.instructions.md`)과 프로젝트의 기존 파일로 연결되는 링크를 확인합니다. 이를 통해 큰 지침 집합을 더 작고 재사용 가능한 파일로 나누고 Copilot이 코드를 생성할 때 따를 예제를 지정할 수 있습니다. 이 경로는 리포지토리 루트가 아니라 지침 파일을 기준으로 합니다.
+11. 마지막으로 `.github/instructions/drizzle.instructions.md`를 열고 아래쪽으로 스크롤합니다. `unit-tests.instructions.md`와 같은 다른 지침 파일 및 프로젝트의 기존 파일로 연결되는 링크를 확인합니다. 이를 통해 큰 지침 집합을 더 작고 재사용 가능한 파일로 나누고 Copilot이 코드를 생성할 때 따를 예제를 지정할 수 있습니다. 여기에 있는 경로는 리포지토리 루트가 아니라 지침 파일을 기준으로 합니다.
 
 ## 팀 지침에 맞게 지침 파일 업데이트
 
@@ -63,9 +63,10 @@ lastUpdated: 2026-07-09
 > [!NOTE]
 > 지침 파일은 Copilot이 생성하는 코드에 큰 영향을 주므로 Copilot을 명확하게 안내하는지 주의 깊게 확인해야 합니다. Copilot으로 초안을 만든 다음 요구 사항을 충족하는지 직접 검토할 수 있습니다. 좋은 출발점이 되는 [Awesome Copilot의 지침 파일 모음][awesome-copilot]도 확인할 수 있습니다.
 
-1. 동일한 파일 캔버스에서 `.github/copilot-instructions.md`로 이동합니다.
-2. 파일 중간쯤에 있는 **Code formatting requirements** 헤더를 찾습니다.
-3. 해당 헤더 아래의 마지막 글머리 기호로 다음 내용을 추가합니다.
+1. 동일한 Files 캔버스에서 `.github/copilot-instructions.md`로 이동합니다.
+2. 파일 도구 모음에서 코드 버튼(`<>` 아이콘)을 선택하여 편집 가능한 소스 보기로 전환합니다.
+3. 파일 중간쯤에 있는 **Code formatting requirements** 헤더를 찾습니다.
+4. 해당 헤더 아래의 마지막 글머리 기호로 다음 내용을 추가합니다.
 
    ```plaintext
    All new TypeScript should contain TSDocs comments for documentation purposes.
